@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-white p-6 shadow rounded-md">
+      {/* <section className="bg-white p-6 shadow rounded-md">
         <h2 className="text-xl font-semibold mb-4">Loan Calculator</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -129,7 +129,7 @@ const Home = () => {
             <p className="font-semibold">Estimated Loan: ${estimatedLoan}</p>
           </div>
         )}
-      </section>
+      </section> */}
     </div>
   );
 };
