@@ -75,7 +75,7 @@ const ApplicationForm = () => {
   };
 
   return (
-    <div className="max-w-lg w-full mx-auto mt-10 p-5 bg-gray-400 rounded-lg shadow-lg">
+    <div className="max-w-lg w-full mx-auto mt-10 p-5 shadow-2xl rounded-lg">
       <h2 className="text-2xl font-semibold mb-5">Loan Application Form</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         {/* Category Field */}
