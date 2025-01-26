@@ -1,24 +1,28 @@
 import mongoose from 'mongoose';
 
 const applicationSchema = mongoose.Schema({
-    category:{
+    category: {
         type: String,
         required: true,
     },
-    subCategory:{
+    subCategory: {
         type: String,
         required: true,
     },
-    amount:{
+    amount: {
         type: String,
         required: true,
     },
-    year:{
+    year: {
         type: String,
         required: true,
     },
-})
+    randomToken: { // Random token ke liye naya field
+        type: String,
+        required: true, // Agar ye field hamesha hona chahiye toh true rakhein
+    },
+});
 
-const Application = mongoose.model("Application",applicationSchema);
+const Application = mongoose.model("Application", applicationSchema);
 
 export default Application;

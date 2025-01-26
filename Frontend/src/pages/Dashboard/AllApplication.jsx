@@ -8,6 +8,7 @@ const AllApplication = () => {
     try {
       const response = await getReq("/auth/all-application");
       setAllApplication(response?.data?.response);
+      console.log(response)
     } catch (error) {
       console.log(error.message);
     }
@@ -32,6 +33,7 @@ const AllApplication = () => {
               Amount
             </th>
             <th className="px-6 py-3 text-sm font-semibold uppercase">Year</th>
+            <th className="px-6 py-3 text-sm font-semibold uppercase">Token</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +54,7 @@ const AllApplication = () => {
                 Rs. {item.amount}
               </td>
               <td className="px-6 py-4 text-sm text-gray-700">{item.year}</td>
+              <td className="px-6 py-4 text-sm text-gray-700">{item.token}</td>
             </tr>
           ))}
         </tbody>

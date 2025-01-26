@@ -158,25 +158,26 @@ const GetApplications = async (req, res)=>{
     }
 }
 
-const AddAllApplicationData = async(req, res)=>{
+const AddAllApplicationData = async (req, res) => {
     try {
-        const {category, subCategory, amount, year} = req.body;
-        console.log(category, subCategory, amount, year)
-        
-        if(!category || !subCategory || !amount || !year){
-            return res.status(400).send({status: 400, message: "inputs required"});
+        const { category, subCategory, amount, year} = req.body;
+
+        if (!category || !subCategory || !amount || !year) {
+            return res.status(400).send({ status: 400, message: "All inputs are required" });
         }
-        
+
         const response = await Application.create({
             category,
             subCategory,
             amount,
             year
-        })
-        res.status(201).send({status: 201, message: "application submit successfully", response});
+        });
+
+        res.status(201).send({ status: 201, message: "Application submitted successfully", response });
     } catch (error) {
-        res.status(500).send({status: 500, message: error.message});
+        res.status(500).send({ status: 500, message: error.message });
     }
-}
+};
+
 
 export {SignupController, LoginController, GetApplications, LogoutController, AddAllApplicationData, ForgotPasswordController, ResetPasswordController};

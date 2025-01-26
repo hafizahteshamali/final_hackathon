@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import TopHeader from '../TopHeader/TopHeader'
 import MainHeader from '../MainHeader/MainHeader'
+import Footer from '../Footer/Footer'
 
 const Layout = () => {
   return (
@@ -9,7 +10,7 @@ const Layout = () => {
         <TopHeader />
         <MainHeader />
         <Outlet />
-        <h1>footer</h1>
+        <Footer />
     </div>
   )
 }
