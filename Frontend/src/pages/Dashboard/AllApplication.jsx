@@ -8,7 +8,7 @@ const AllApplication = () => {
     try {
       const response = await getReq("/auth/all-application");
       setAllApplication(response?.data?.response);
-      console.log(response)
+      console.log(AllApplication?.data)
     } catch (error) {
       console.log(error.message);
     }
